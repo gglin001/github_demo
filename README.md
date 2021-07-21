@@ -2,4 +2,4 @@
 
 ## merge a pr 01
 
-merge pr
+use merge pr
