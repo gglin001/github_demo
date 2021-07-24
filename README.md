@@ -16,4 +16,4 @@ use rebase and merge
 
 self-host not running
 
-pr1, pr1_1
+pr1, pr1_1, pr1_2
