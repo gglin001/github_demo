@@ -12,4 +12,4 @@ use
 
 use rebase and merge
 
-## add cmek project
+## add cmake project
