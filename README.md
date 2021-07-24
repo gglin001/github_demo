@@ -13,3 +13,5 @@ use
 use rebase and merge
 
 ## add cmake project
+
+self-host not running
