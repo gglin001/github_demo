@@ -10,15 +10,20 @@ on:
       - master
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     container:
       image: python:3.9.7-alpine3.13
 
     steps:
-    - uses: actions/checkout@v2
-    - name: python demo
-      run: python -c "print('hi, there')"
+      - uses: actions/checkout@v2
+
+      - name: uname
+        run: uname -a
+
+      - name: python version
+        run: python -V
+
+      - name: python demo
+        run: python -c "print('hi, there')"
