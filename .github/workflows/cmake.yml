@@ -22,6 +22,9 @@ jobs:
       - name: pwd
         run: pwd
 
+      - name: ls
+        run: ls -l
+
       - name: uname
         run: uname -a
 
