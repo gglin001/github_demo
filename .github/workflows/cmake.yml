@@ -17,10 +17,10 @@ jobs:
       image: python:3.9.7-alpine3.13
 
     steps:
-      - name: python version0
-        run: python -V
-
       - uses: actions/checkout@v2
+
+      - name: pwd
+        run: pwd
 
       - name: uname
         run: uname -a
