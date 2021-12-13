@@ -5,13 +5,13 @@ on:
   #   branches:
   #     - master
 
-  # pull_request:
-  #   branches:
-  #     - master
-
-  pull_request_target:
+  pull_request:
     branches:
       - master
+
+  # pull_request_target:
+  #   branches:
+  #     - master
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
