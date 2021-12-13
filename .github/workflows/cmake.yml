@@ -56,5 +56,5 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: build_${{github.sha}}.zip
+          name: build_${{github.sha[29:39]}}.zip
           path: ${{github.workspace}}/build/main
