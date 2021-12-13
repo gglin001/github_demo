@@ -16,7 +16,7 @@ on:
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
-  SHORTSHA: $(git rev-parse --short=7 ${{ github.sha }})
+  SHORTSHA: ${{git rev-parse --short=7 ${{ github.sha }}}}
 
 jobs:
   # pre-commit:
