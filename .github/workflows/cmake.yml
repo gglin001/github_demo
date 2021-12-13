@@ -56,5 +56,5 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: build_$(echo ${GITHUB_SHA} | cut -c1-8).zip
+          name: build_${{github.sha}}.zip
           path: ${{github.workspace}}/build/main
