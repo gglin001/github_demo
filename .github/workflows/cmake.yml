@@ -61,7 +61,7 @@ jobs:
         run: python3  -m pip install pytest
 
       - name: pytest
-        run: pytest\
+        run: pytest \
           --maxfail=3 \
           test.py
 
