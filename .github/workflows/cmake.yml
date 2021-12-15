@@ -61,7 +61,9 @@ jobs:
         run: python3  -m pip install pytest
 
       - name: pytest
-        run: pytest test.py
+        run: pytest\
+          --maxfail=3 \
+          test.py
 
       - uses: actions/upload-artifact@v2
         with:
