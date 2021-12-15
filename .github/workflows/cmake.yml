@@ -58,7 +58,7 @@ jobs:
       #   run: ctest -C ${{env.BUILD_TYPE}}
 
       - name: install pytest
-        run: python3  -m pip install pytest -y
+        run: python3  -m pip install pytest
 
       - name: pytest
         run: pytest test.py
