@@ -16,7 +16,6 @@ on:
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
-  GITHUB_SHORTSHA: ${GITHUB_SHA::7}
 
 jobs:
   # pre-commit:
@@ -62,5 +61,5 @@ jobs:
 
       - name: copy wheel
         run: |
-          tar czf /tmp/build_${GITHUB_SHORTSHA}.tar.gz ${GITHUB_WORKSPACE}/build/main
-          ls -lh /tmp/build_${GITHUB_SHORTSHA}.tar.gz
+          tar czf /tmp/build_${GITHUB_SHA}.tar.gz ${GITHUB_WORKSPACE}/build/main
+          ls -lh /tmp/build_${GITHUB_SHA}.tar.gz
