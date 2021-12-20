@@ -62,4 +62,5 @@ jobs:
       - name: copy wheel
         run: |
           tar czf /tmp/build_${GITHUB_SHA}.tar.gz ${GITHUB_WORKSPACE}/build/main
+          echo "create tar file: /tmp/build_${GITHUB_SHA}.tar.gz"
           ls -lh /tmp/build_${GITHUB_SHA}.tar.gz
