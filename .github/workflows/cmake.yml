@@ -16,6 +16,7 @@ on:
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
+  GITHUB_SHA: ${{github.sha}}
 
 jobs:
   # pre-commit:
@@ -54,7 +55,12 @@ jobs:
       #   # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       #   run: ctest -C ${{env.BUILD_TYPE}}
 
-      - uses: actions/upload-artifact@v2
-        with:
-          name: build_${{github.sha}}.zip
-          path: ${{github.workspace}}/build/main
+      # - uses: actions/upload-artifact@v2
+      #   with:
+      #     name: build_${{github.sha}}.zip
+      #     path: ${{github.workspace}}/build/main
+
+      - name: copy wheel
+        run: |
+          tar czf /tmp/paddle_ipu_${GITHUB_SHA}.tar.gz /tmp/paddlepaddle-0.0.0-cp37-cp37m-linux_x86_64.whl
+          ls -lh /tmp/paddle_ipu_${GITHUB_SHA}.tar.gz
